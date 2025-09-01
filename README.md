@@ -21,7 +21,7 @@ We test two **frames** because power and duties invert:
 
 ## 2) Why Lake Merritt?
 
-**Lake Merritt** is our evaluation workbench. It gives us:
+**[Lake Merritt](https://www.civics.com/evals)** is our evaluation workbench. It gives us:
 
 * **CSV ingestion** for simple, repeatable datasets with `input`, `output` (optional), and `metadata`.
 * **Eval Packs (YAML):** self-contained pipelines describing which scorers to run in what order, plus gating logic (run\_if).
