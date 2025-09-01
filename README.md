@@ -1,4 +1,4 @@
-# Preliminary Fiduciary Duty of Loyalty Dataset and Notional Eval Test Run
+# Fiduciary Duty of Loyalty Dataset and Notional Eval Test Run
 
 ________
 
