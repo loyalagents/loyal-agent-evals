@@ -1,6 +1,6 @@
 # Exploring Legal Dimensions of Loyal Agents
 
-The following is in initial exploration of Loyal Agents legal dimension, include I) potential approaches for expressing scopes of authority and levels of permitted autonomy for AI Agents using the so-called Human Context Protocol; and II) Fiduciary duty of loyalty dataset and notional eval test run.
+The following is in [initial exploration](https://loyalagents.github.io/loyal-agent-evals/) of Loyal Agents legal dimension, include I) potential approaches for expressing scopes of authority and levels of permitted autonomy for AI Agents using the so-called Human Context Protocol; and II) Fiduciary duty of loyalty dataset and notional eval test run.
 
 # I. Grant of Authority and Autonomy Configuration for Loyal Agents
 
