@@ -1,0 +1,69 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+*.egg-info/
+dist/
+build/
+
+# Environment
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+logs/
+workspace/logs/
+
+# Test outputs
+*.pytest_cache/
+.coverage
+
+# OS
+.DS_Store
+Thumbs.db
+
+# === ROOT DIRECTORY PROTECTION ===
+# Prevent common file organization mistakes
+# (These patterns catch files that should be in subdirectories)
+
+# Session/task artifacts (should be in docs/maintenance/)
+/*_analysis.md
+/*_report.md
+/*_completion.md
+/*_walkthrough.md
+/*_summary.md
+
+# Debug/test files (should be in tests/ or workspace/)
+/debug_*.py
+/test_*.py
+/debug_*.sh
+/test_*.sh
+
+# Results files (should be in tests/<feature>/results/)
+/results_*.json
+/results_*.md
+/RESULTS_*.md
+
+# Research data (should be in tests/experiments/)
+/research_*.json
+/research_*.md
+
+# Exceptions: Legitimate root files
+!README.md
+!CHANGELOG.md
+!CRITICAL_INFO.md
+!CONTRIBUTING.md
+!LICENSE
+!HowToRunMe.md
+!VERIFICATION_GUIDE.md
