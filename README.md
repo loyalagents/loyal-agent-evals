@@ -292,7 +292,6 @@ pydantic>=2.0.0
 |--------|------|-------|-------|-------------|
 | [report_20251208_144306.md](reports/report_20251208_144306.md) | 2025-12-08 | Consumer | 40 | 81.2% LLM, 100% UETA |
 | [report_20251208_144428.md](reports/report_20251208_144428.md) | 2025-12-08 | Business | 7 | 100% all scorers |
-| [report_full_run.md](report_full_run.md) | 2025-12-08 | Analysis | — | Comparative analysis |
 
 ---
 
