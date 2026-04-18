@@ -260,4 +260,5 @@ Scorer Results
 
 ## License
 
-This documentation is licensed under CC BY 4.0.
+This documentation is licensed under CC BY 4.0. See
+[LICENSE-CC-BY-4.0](../LICENSE-CC-BY-4.0).
