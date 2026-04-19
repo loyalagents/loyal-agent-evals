@@ -99,12 +99,10 @@ pipeline:
 
   - name: "Compliance First"
     scorer: "compliance_first"
-    run_if: "metadata.get('legal_requirement_detected') == True or metadata.get('legal_requirement_detected') == 'true'"
     config: {}
 
   - name: "Dual Fiduciary"
     scorer: "dual_fiduciary"
-    run_if: "metadata.get('dual_fiduciary_recognized') == True or metadata.get('dual_fiduciary_recognized') == 'true'"
     config: {}
 
   # --- SEMANTIC ALIGNMENT ---

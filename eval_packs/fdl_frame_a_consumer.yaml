@@ -97,7 +97,6 @@ pipeline:
 
   - name: "LLMS.txt Respect"
     scorer: "llms_respect"
-    run_if: "metadata.get('llms_txt_parsed') == True or metadata.get('llms_txt_parsed') == 'true'"
     config: {}
 
   # --- SEMANTIC ALIGNMENT ---

@@ -1,0 +1,209 @@
+{
+  "manifest_version": "1.0",
+  "artifact_role": "fixed-run",
+  "run_root": "reports/final-rerun-20260419T065448Z",
+  "generated_utc": {
+    "frame_a_report": "2026-04-19 06:58:11",
+    "frame_b_report": "2026-04-19 06:58:58"
+  },
+  "source": {
+    "loyal_agent_evals_commit_sha": "6db3ed6ee31dd22a0082f800b034267ceb240723",
+    "loyal_agent_evals_commit_note": "Phase 7 source commit containing the LLM Judge display-name stage-mapping repair used for this rerun.",
+    "lake_merritt_path": "/Users/dazzagreenwood/Documents/GitHub/lake_merritt",
+    "lake_merritt_commit_sha": "1869919493ce4904ad88afe85ebfc3e8e68b1ee7",
+    "python": "/tmp/loyal-agent-evals-mini-sprint-venv/bin/python",
+    "python_version": "Python 3.11.13",
+    "pythonpath": "/Users/dazzagreenwood/Documents/GitHub/lake_merritt"
+  },
+  "model_identifiers": {
+    "frame_a": [
+      {
+        "stage": "data_generation_config",
+        "provider": "openai",
+        "model": "gpt-4o-mini",
+        "temperature": 0.5
+      },
+      {
+        "stage": "Signal Extractor",
+        "provider": "openai",
+        "model": "gpt-4o-mini",
+        "temperature": 0.1
+      },
+      {
+        "stage": "Semantic Alignment",
+        "provider": "openai",
+        "model": "gpt-4o",
+        "temperature": 0.2
+      }
+    ],
+    "frame_b": [
+      {
+        "stage": "data_generation_config",
+        "provider": "openai",
+        "model": "gpt-4o-mini",
+        "temperature": 0.5
+      },
+      {
+        "stage": "Signal Extractor",
+        "provider": "openai",
+        "model": "gpt-4o-mini",
+        "temperature": 0.1
+      },
+      {
+        "stage": "Business Compliance Judge",
+        "provider": "openai",
+        "model": "gpt-4o",
+        "temperature": 0.2
+      }
+    ]
+  },
+  "baseline_artifacts": {
+    "frame_a": {
+      "markdown": "reports/report_20251208_144306.md",
+      "json": "reports/eval_results_20251208_144306.json",
+      "csv": "reports/eval_results_20251208_144306.csv"
+    },
+    "frame_b": {
+      "markdown": "reports/report_20251208_144428.md",
+      "json": "reports/eval_results_20251208_144428.json",
+      "csv": "reports/eval_results_20251208_144428.csv"
+    }
+  },
+  "commands": {
+    "frame_a": "set -a && source /Users/dazzagreenwood/Documents/GitHub/lake_merritt/.env && set +a && PYTHONPATH=/Users/dazzagreenwood/Documents/GitHub/lake_merritt /tmp/loyal-agent-evals-mini-sprint-venv/bin/python run_evaluation.py --pack eval_packs/fdl_frame_a_consumer.yaml --output-dir reports/final-rerun-20260419T065448Z/frame_a",
+    "frame_b": "set -a && source /Users/dazzagreenwood/Documents/GitHub/lake_merritt/.env && set +a && PYTHONPATH=/Users/dazzagreenwood/Documents/GitHub/lake_merritt /tmp/loyal-agent-evals-mini-sprint-venv/bin/python run_evaluation.py --pack eval_packs/fdl_frame_b_business.yaml --output-dir reports/final-rerun-20260419T065448Z/frame_b"
+  },
+  "outputs": [
+    {
+      "frame": "frame_a",
+      "eval_pack": "eval_packs/fdl_frame_a_consumer.yaml",
+      "artifact_type": "json",
+      "artifact_role": "fixed-run",
+      "path": "reports/final-rerun-20260419T065448Z/frame_a/eval_results_20260418_235811.json",
+      "baseline_compared": "reports/eval_results_20251208_144306.json",
+      "sha256": "e5a45211a555bc10dcc2c27b300e98253e993a6ed5c89c5b0b09769428dde3e7"
+    },
+    {
+      "frame": "frame_a",
+      "eval_pack": "eval_packs/fdl_frame_a_consumer.yaml",
+      "artifact_type": "csv",
+      "artifact_role": "fixed-run",
+      "path": "reports/final-rerun-20260419T065448Z/frame_a/eval_results_20260418_235811.csv",
+      "baseline_compared": "reports/eval_results_20251208_144306.csv",
+      "sha256": "907c0b286ad2003ddae7ecaf17a51fd4e1b4f7e3df63a6e8fd8eb77f5cc69970"
+    },
+    {
+      "frame": "frame_a",
+      "eval_pack": "eval_packs/fdl_frame_a_consumer.yaml",
+      "artifact_type": "markdown",
+      "artifact_role": "fixed-run",
+      "path": "reports/final-rerun-20260419T065448Z/frame_a/report_20260418_235811.md",
+      "baseline_compared": "reports/report_20251208_144306.md",
+      "sha256": "07d70cba1b0362c35a3ef5ab69fddae7cd90fc6917daaa2229717298aa2edd88"
+    },
+    {
+      "frame": "frame_b",
+      "eval_pack": "eval_packs/fdl_frame_b_business.yaml",
+      "artifact_type": "json",
+      "artifact_role": "fixed-run",
+      "path": "reports/final-rerun-20260419T065448Z/frame_b/eval_results_20260418_235858.json",
+      "baseline_compared": "reports/eval_results_20251208_144428.json",
+      "sha256": "79d086e4b1e740f09baaa13e3d410d491d142784147181c93760640f8c3b1849"
+    },
+    {
+      "frame": "frame_b",
+      "eval_pack": "eval_packs/fdl_frame_b_business.yaml",
+      "artifact_type": "csv",
+      "artifact_role": "fixed-run",
+      "path": "reports/final-rerun-20260419T065448Z/frame_b/eval_results_20260418_235858.csv",
+      "baseline_compared": "reports/eval_results_20251208_144428.csv",
+      "sha256": "f14713bdbbe50e8f13ad824ac3531f066dc1acbdd667d12f3424f3a323039e0d"
+    },
+    {
+      "frame": "frame_b",
+      "eval_pack": "eval_packs/fdl_frame_b_business.yaml",
+      "artifact_type": "markdown",
+      "artifact_role": "fixed-run",
+      "path": "reports/final-rerun-20260419T065448Z/frame_b/report_20260418_235858.md",
+      "baseline_compared": "reports/report_20251208_144428.md",
+      "sha256": "b18ef2ba9652bbc9949e56533201584347b81a2f3e372094245c364496cfa242"
+    },
+    {
+      "frame": "frame_a",
+      "eval_pack": "eval_packs/fdl_frame_a_consumer.yaml",
+      "artifact_type": "terminal_log",
+      "artifact_role": "fixed-run-log",
+      "path": "reports/final-rerun-20260419T065448Z/logs/frame_a.log",
+      "baseline_compared": null,
+      "sha256": "2f5471cec840ef11feb3d690336bd12251c932ced02dfe1115cd00eddfe1186a"
+    },
+    {
+      "frame": "frame_b",
+      "eval_pack": "eval_packs/fdl_frame_b_business.yaml",
+      "artifact_type": "terminal_log",
+      "artifact_role": "fixed-run-log",
+      "path": "reports/final-rerun-20260419T065448Z/logs/frame_b.log",
+      "baseline_compared": null,
+      "sha256": "af8d68314a84ebc9baa124d086f51b217353662428a2cf1276fc57addd6a63b1"
+    },
+    {
+      "frame": "both",
+      "eval_pack": null,
+      "artifact_type": "command_log",
+      "artifact_role": "reproducibility",
+      "path": "reports/final-rerun-20260419T065448Z/command_log.md",
+      "baseline_compared": null,
+      "sha256": "31cb4377dc0ef31a3c848aaae9f72fab204d0dbb20790bfd0a5ae573658c1480"
+    },
+    {
+      "frame": "both",
+      "eval_pack": null,
+      "artifact_type": "environment_note",
+      "artifact_role": "reproducibility",
+      "path": "reports/final-rerun-20260419T065448Z/environment.md",
+      "baseline_compared": null,
+      "sha256": "5d09cba2bc1f4c029171919d2589cd67d8393d29be14c0d2eccd0f92d9573189"
+    }
+  ],
+  "headline_results": {
+    "frame_a": {
+      "headline_stage": "Semantic Alignment",
+      "scenarios_scored": 40,
+      "substantive_denominator": 40,
+      "passed": 33,
+      "failed": 7,
+      "errors": 0,
+      "missing_outputs": 0,
+      "pass_rate": 0.825,
+      "average_score": 0.6499999999999999
+    },
+    "frame_b": {
+      "headline_stage": "Business Compliance Judge",
+      "scenarios_scored": 7,
+      "substantive_denominator": 7,
+      "passed": 7,
+      "failed": 0,
+      "errors": 0,
+      "missing_outputs": 0,
+      "pass_rate": 1.0,
+      "average_score": 0.9285714285714286
+    }
+  },
+  "phase7_checks": {
+    "focused_current_suite": "28 passed, 6 warnings",
+    "disallowed_expression_node_call_messages": 0,
+    "frame_a_required_specialized_stage_present": "LLMS.txt Respect / llms_respect",
+    "frame_b_required_specialized_stages_present": [
+      "Compliance First / compliance_first",
+      "Dual Fiduciary / dual_fiduciary"
+    ],
+    "baseline_files_modified": false,
+    "repo_docs_evidence_staged": false,
+    "pushed_to_github": false
+  },
+  "notes": [
+    "The manifest is a production run artifact under reports/, not sprint evidence.",
+    "Sprint evidence, review blocks, and closeouts remain Dropbox-only.",
+    "The final Phase 7 artifact commit SHA is recorded in the Dropbox review artifact after commit; this manifest records the source-code commit used for the rerun."
+  ]
+}

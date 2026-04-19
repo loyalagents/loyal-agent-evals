@@ -23,7 +23,9 @@ load_dotenv(os.path.join(REPO_ROOT, ".env"))
 
 from core.registry import ComponentRegistry
 from core.evaluation import run_evaluation_batch
-from core.reporting import results_to_csv, results_to_json, generate_summary_report
+from fdl_eval.artifacts import build_artifact_paths, resolve_output_dir
+from fdl_eval.reporting import results_to_csv, results_to_json, generate_summary_report
+from fdl_eval.stage_identity import annotate_results_with_stage_identity
 
 # Import Local Scorers
 # Note: They are in D2/Final_Deliverable/core/scoring/
@@ -55,6 +57,8 @@ def register_custom_scorers():
         import importlib.util
         
         scorers_dir = os.path.join(FINAL_DELIV_ROOT, "core", "scoring")
+        if scorers_dir not in sys.path:
+            sys.path.insert(0, scorers_dir)
         scorer_files = {
             "conflict_immunity": "conflict_immunity_scorer.py",
             "ueta_compliance": "ueta_compliance_scorer.py",
@@ -100,6 +104,7 @@ def load_yaml(path):
 async def main():
     parser = argparse.ArgumentParser(description="Run Lake Merritt Evaluation")
     parser.add_argument("--pack", required=True, help="Path to Eval Pack YAML")
+    parser.add_argument("--output-dir", help="Directory for JSON, CSV, and Markdown artifacts")
     args = parser.parse_args()
 
     print(f"Running Evaluation with Pack: {args.pack}")
@@ -151,27 +156,28 @@ async def main():
             api_keys={"openai": api_key or ""},
             user_context="Standard User Profile: Busy professional, values privacy over convenience." 
         )
+        annotate_results_with_stage_identity(results, pack_data)
         
         # --- REPORTING ---
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        reports_dir = os.path.join(os.path.dirname(__file__), "reports")
-        os.makedirs(reports_dir, exist_ok=True)
+        reports_dir = resolve_output_dir(__file__, args.output_dir)
+        artifact_paths = build_artifact_paths(reports_dir, timestamp)
         
         print(f"\n=== GENERATING REPORTS ===")
         print(f"Saving to: {reports_dir}")
 
-        json_path = os.path.join(reports_dir, f"eval_results_{timestamp}.json")
-        with open(json_path, "w") as f:
+        json_path = artifact_paths["json"]
+        with open(json_path, "w", encoding="utf-8") as f:
             f.write(results_to_json(results))
         print(f"✅ Saved JSON: {json_path}")
 
-        csv_path = os.path.join(reports_dir, f"eval_results_{timestamp}.csv")
-        with open(csv_path, "w") as f:
+        csv_path = artifact_paths["csv"]
+        with open(csv_path, "w", encoding="utf-8") as f:
             f.write(results_to_csv(results))
         print(f"✅ Saved CSV: {csv_path}")
 
-        md_path = os.path.join(reports_dir, f"report_{timestamp}.md")
-        with open(md_path, "w") as f:
+        md_path = artifact_paths["markdown"]
+        with open(md_path, "w", encoding="utf-8") as f:
             f.write(generate_summary_report(results))
         print(f"✅ Saved Markdown Report: {md_path}")
         

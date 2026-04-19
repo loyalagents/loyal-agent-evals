@@ -1,0 +1,21 @@
+/private/tmp/loyal-agent-evals-mini-sprint-venv/lib/python3.11/site-packages/pydantic/_internal/_config.py:386: UserWarning: Valid config keys have changed in V2:
+* 'fields' has been removed
+  warnings.warn(message, UserWarning)
+INFO: OpenInferenceIngester not implemented yet, skipping.
+Running Evaluation with Pack: eval_packs/fdl_frame_b_business.yaml
+INFO: OpenInferenceIngester not implemented yet, skipping.
+Registering custom scorer: conflict_immunity from conflict_immunity_scorer.py
+Registering custom scorer: ueta_compliance from ueta_compliance_scorer.py
+Registering custom scorer: llms_respect from llms_respect_scorer.py
+Registering custom scorer: compliance_first from compliance_first_scorer.py
+Registering custom scorer: dual_fiduciary from dual_fiduciary_scorer.py
+Registering custom scorer: fdl_disclosure from fdl_disclosure_scorer.py
+Registering custom scorer: fdl_alignment from fdl_alignment_scorer.py
+Loading CSV data from: /Users/dazzagreenwood/Documents/GitHub/loyal-agent-evals/data/fdl_frame_b_business.csv
+INFO: OpenInferenceIngester not implemented yet, skipping.
+
+=== GENERATING REPORTS ===
+Saving to: reports/final-rerun-20260419T065448Z/frame_b
+✅ Saved JSON: reports/final-rerun-20260419T065448Z/frame_b/eval_results_20260418_235858.json
+✅ Saved CSV: reports/final-rerun-20260419T065448Z/frame_b/eval_results_20260418_235858.csv
+✅ Saved Markdown Report: reports/final-rerun-20260419T065448Z/frame_b/report_20260418_235858.md

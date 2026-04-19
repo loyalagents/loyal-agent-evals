@@ -226,26 +226,28 @@ This framework is designed for reuse:
 
 ---
 
-## Known Issues and Future Fixes/Improvements
+## Baseline Notes and Fixed-Rerun Behavior
 
-### run_if Condition Syntax
+### Specialized Scorer Invocation
 
-The Lake Merritt core evaluator currently does not support function calls (like `metadata.get()`) in `run_if` conditional expressions. This affects three scorers:
+The December 2025 baseline reports were produced before the frame packs stopped using `metadata.get()` function calls in `run_if` expressions. In that baseline, three specialized scorers were skipped by Lake Merritt's expression validator:
 
 - **LLMS.txt Respect** (Frame A)
-- **Compliance First** (Frame B) 
+- **Compliance First** (Frame B)
 - **Dual Fiduciary** (Frame B)
 
-These scorers are skipped during evaluation with the message:
-```
-Disallowed expression node: Call
-```
+Current frame packs invoke these scorers directly and let each scorer decide whether it is substantively applicable. Missing or irrelevant observable signals are exported as `status=N/A`, `applicable=false`, and `substantive=false`, rather than counted as substantive pass-rate evidence.
 
-**Impact**: The baseline LLM Judge scorers still evaluate all scenarios. The specialized scorers will function once the Lake Merritt core supports `metadata.get()` syntax in expressions.
+The fixed rerun is stored under `reports/final-rerun-20260419T065448Z/`. Its logs contain no `Disallowed expression node: Call` messages.
 
-### Failure Analysis Reporting
+### Stage-Aware Reporting
 
-Reports show failure counts per-scorer-stage rather than per-unique-scenario. Since two LLM Judge stages run per item, the same scenario may appear twice in failure lists and counts show "80" instead of "40" items. Future work: aggregate failures by unique scenario ID to make this more intuitively readable.
+The December 2025 baseline Markdown reports aggregate duplicate `LLM Judge` scorer names by scorer label, so Frame A appears as `65/80` and Frame B as `14/14`. Current fixed-run reports are stage-aware:
+
+- Headline pass rates use the configured final judge stage: `Semantic Alignment` for Frame A and `Business Compliance Judge` for Frame B.
+- Frame A headline counts are scenario-level (`33/40`), not duplicate-stage counts (`65/80`).
+- Frame B headline counts are scenario-level (`7/7`), not duplicate-stage counts (`14/14`).
+- JSON exports preserve `headline_summary`, `stage_summary`, and per-score stage fields. Use those fields for substantive reporting instead of legacy compatibility `summary_stats`.
 
 ### Streaming Evals
 
@@ -291,5 +293,7 @@ pydantic>=2.0.0
 |--------|------|-------|-------|-------------|
 | [report_20251208_144306.md](reports/report_20251208_144306.md) | 2025-12-08 | Consumer | 40 | 81.2% LLM, 100% UETA |
 | [report_20251208_144428.md](reports/report_20251208_144428.md) | 2025-12-08 | Business | 7 | 100% all scorers |
+| [report_20260418_235811.md](reports/final-rerun-20260419T065448Z/frame_a/report_20260418_235811.md) | 2026-04-19 | Consumer fixed rerun | 40 | 33/40 Semantic Alignment, LLMS 4 applicable / 36 N/A |
+| [report_20260418_235858.md](reports/final-rerun-20260419T065448Z/frame_b/report_20260418_235858.md) | 2026-04-19 | Business fixed rerun | 7 | 7/7 Business Compliance Judge, Compliance First 3 applicable / 4 N/A, Dual Fiduciary 1 applicable / 6 N/A |
 
 ---
