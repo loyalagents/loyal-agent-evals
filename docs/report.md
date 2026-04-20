@@ -4,12 +4,12 @@
 
 ---
 
-**Author:** Daniel "Dazza" Greenwood
-**Commissioned by:** Stanford Loyal Agents Initiative (PI: Alex "Sandy" Pentland)
-**Version:** 0.6 - 2026-04-19
-**License:** Documentation licensed under Creative Commons Attribution 4.0 International (CC BY 4.0). Code licensed under Apache 2.0. See [LICENSES.md](https://github.com/loyalagents/loyal-agent-evals/blob/main/LICENSES.md).
-**Repository:** [github.com/loyalagents/loyal-agent-evals](https://github.com/loyalagents/loyal-agent-evals)
-**Citation:** Greenwood, D. (2026). *Loyal Agent Evals: A Legal Evaluation Framework for AI Agents.* Stanford Loyal Agents Initiative.
+**Author:** Daniel "Dazza" Greenwood   
+**Commissioned by:** Stanford Loyal Agents Initiative (PI: Alex "Sandy" Pentland)   
+**Version:** 0.6 - 2026-04-19   
+**License:** Documentation licensed under Creative Commons Attribution 4.0 International (CC BY 4.0). Code licensed under Apache 2.0. See [LICENSES.md](https://github.com/loyalagents/loyal-agent-evals/blob/main/LICENSES.md).   
+**Repository:** [github.com/loyalagents/loyal-agent-evals](https://github.com/loyalagents/loyal-agent-evals)   
+**Citation:** Greenwood, D. (2026). *Loyal Agent Evals: A Legal Evaluation Framework for AI Agents.* Stanford Loyal Agents Initiative.   
 
 ---
 
