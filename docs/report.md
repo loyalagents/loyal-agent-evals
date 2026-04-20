@@ -929,15 +929,15 @@ Dated model snapshots (e.g., `gpt-4o-mini-2024-07-18`, `gpt-4o-2024-08-06`) were
 
 ---
 
-## Appendix G — Frontier-Model Consumer Terms Snapshot (retrieved April 19, 2026)
+### Appendix G — Frontier-Model Consumer Terms Snapshot (retrieved April 19, 2026)
 
-### G.0 Purpose and framing
+#### G.0 Purpose and framing
 
 This appendix records a dated review of consumer-facing legal terms for four leading frontier-model AI products: Anthropic Claude.ai / Claude Pro; OpenAI ChatGPT / ChatGPT Plus; Google Gemini / Gemini Advanced (Google One AI Premium); and xAI Grok / SuperGrok. It is not legal advice and it is not a complete ToS analysis. Its purpose is to document the contractual baseline against which the Observable Contractual Loyalty proposal in §2.2–§2.3.2 should be understood, and to give readers fixed reference points for the quoted clauses that appear in the body of this report.
 
 **Key finding.** The consumer terms surveyed generally do not assume fiduciary or agency duties. Instead, they allocate reliance, output-use, warranty, confidentiality/data-use, subscription, and liability risk to users through standard service-contract language. Downstream AI Agent providers may layer their own terms on top of these model-provider terms and may voluntarily accept more specific duties to users (see §2.3.1, §2.3.2, §11.4).
 
-### G.1 Methodology
+#### G.1 Methodology
 
 - **Retrieval date for all entries:** 2026-04-19.
 - **Review method:** Two independent research lanes (Claude Desktop via WebFetch + WebSearch; Claude Code CLI worker via the same), plus a subsequent verification pass by Codex Desktop that corrected several findings. Lane attributions appear in the companion research artifact (`tos-report-1-claude.md`, on file with the author).
@@ -947,7 +947,7 @@ This appendix records a dated review of consumer-facing legal terms for four lea
 
 ---
 
-### G.2 Anthropic — Claude.ai and Claude Pro
+#### G.2 Anthropic — Claude.ai and Claude Pro
 
 **Canonical sources.**
 
@@ -975,7 +975,7 @@ This appendix records a dated review of consumer-facing legal terms for four lea
 
 ---
 
-### G.3 OpenAI — ChatGPT and ChatGPT Plus
+#### G.3 OpenAI — ChatGPT and ChatGPT Plus
 
 **Canonical sources (consumer).**
 
@@ -1015,7 +1015,7 @@ This appendix records a dated review of consumer-facing legal terms for four lea
 
 ---
 
-### G.4 Google — Gemini and Gemini Advanced (Google One AI Premium)
+#### G.4 Google — Gemini and Gemini Advanced (Google One AI Premium)
 
 **Canonical sources.**
 
@@ -1043,7 +1043,7 @@ This appendix records a dated review of consumer-facing legal terms for four lea
 
 ---
 
-### G.5 xAI — Grok and SuperGrok
+#### G.5 xAI — Grok and SuperGrok
 
 **Canonical sources.**
 
@@ -1076,7 +1076,7 @@ This appendix records a dated review of consumer-facing legal terms for four lea
 
 ---
 
-### G.6 Summary characterization table
+#### G.6 Summary characterization table
 
 | Provider / product | Consumer source(s) | Paid consumer source(s) | Effective / updated date | Retrieval date | Classification | Snapshot finding |
 |---|---|---|---|---|---|---|
@@ -1086,11 +1086,11 @@ This appendix records a dated review of consumer-facing legal terms for four lea
 | **Google** Gemini / Gemini Advanced | Google Terms of Service; Gemini Apps Privacy Hub; Generative AI Prohibited Use Policy | Google One Additional Terms layered on Google Terms | Google Terms: May 22, 2024 | Apr. 19, 2026 | (ii) Implicit risk allocation | No express fiduciary / no-agency clause found; "DON'T RELY ON THE SERVICES FOR MEDICAL, LEGAL, FINANCIAL, OR OTHER PROFESSIONAL ADVICE"; as-is / liability-cap terms; confidentiality warning in Gemini Apps Privacy Hub. |
 | **xAI** Grok / SuperGrok | xAI Consumer Terms of Service | Same consumer terms | Apr. 10, 2026 | Apr. 19, 2026 | (ii) Implicit risk allocation | No express fiduciary / no-agency clause in consumer terms; prohibition on unauthorized actions and on high-stakes automated decisions; output not sole truth or professional advice; user indemnity; as-is / liability-cap terms. |
 
-### G.7 What no surveyed provider currently does
+#### G.7 What no surveyed provider currently does
 
 No frontier-model consumer ToS surveyed here currently occupies posture (iv) — **express acceptance** of enumerated duties of loyalty, care, obedience, disclosure, confidentiality, conflict management, or confirmation. That posture is the design target of the framework presented in this report, and the recommended path for AI Agent providers who want to differentiate on trust commitments (see §2.3.1, §2.3.2, §11.4).
 
-### G.8 Verification caveats
+#### G.8 Verification caveats
 
 - **Direct HTTP fetch:** successful (HTTP 200) for Anthropic Consumer Terms, Google Terms of Service, Gemini Apps Privacy Hub. Unsuccessful (HTTP 403) for OpenAI policy pages and xAI policy pages from the research environment; for those providers, quotes above were obtained from web-search snippets reproducing the live language and confirmed by subsequent residential-IP browser access. Any reader independently verifying the quotes should use a standard browser from a residential IP.
 - **Retrieval date:** uniform 2026-04-19.
