@@ -127,7 +127,7 @@ def page_shell(title: str, body: str, toc: str) -> str:
     <header class="page-hero page-hero--compact">
       <p class="eyebrow">Rendered report</p>
       <h1>{title}</h1>
-      <p>The canonical Markdown remains available at <a href="../docs/report.md">docs/report.md</a>. This page renders the same report with stable section anchors and a visible §15 bibliography.</p>
+      <p>The canonical Markdown remains available at <a href="../docs/report.md">docs/report.md</a>. A PDF version is available at <a href="../docs/report.pdf">docs/report.pdf</a>. This page renders the same report with stable section anchors and a visible §15 bibliography.</p>
     </header>
     <div class="report-shell">
       {toc}
