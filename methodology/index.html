@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Methodology - Loyal Agent Evals</title>
+  <meta name="description" content="Evaluation frames, scoring flow, reproducibility, and scope for Loyal Agent Evals.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header"><div class="site-header__inner"><a class="site-header__brand" href="../">Loyal Agent Evals</a><button class="site-nav__toggle" type="button" aria-controls="site-nav-list" aria-expanded="false">Menu</button><nav class="site-nav" aria-label="Primary"><ul class="site-nav__list" id="site-nav-list" data-open="false"><li><a href="../report/">Report</a></li><li><a href="../results/">Results</a></li><li><a href="../walkthroughs/">Walkthroughs</a></li><li><a href="../methodology/">Methodology</a></li><li><a href="../framework/">Framework</a></li><li><a href="../tos/">ToS</a></li><li><a href="../artifacts/">Artifacts</a></li><li><a href="../contract/">Contract</a></li></ul></nav></div></header>
+  <main id="main">
+    <header class="page-hero">
+      <p class="eyebrow">Method</p>
+      <h1>Evaluation Methodology</h1>
+      <p>The evaluator turns contractual duties into observable scenario-level checks across consumer and business fiduciary frames.</p>
+    </header>
+    <section class="card-grid card-grid--two">
+      <article class="content-card">
+        <h2>Two frames</h2>
+        <p><strong>Frame A</strong> covers 40 consumer fiduciary scenarios: product search, purchases, vendor conflicts, LLMS.txt restrictions, confirmation gates, and data minimization.</p>
+        <p><strong>Frame B</strong> covers 7 business fiduciary scenarios: compliance-over-policy, tax and legal requirements, antitrust-sensitive conduct, and dual-fiduciary negotiation.</p>
+      </article>
+      <article class="content-card">
+        <h2>Two-step flow</h2>
+        <p>Each scenario prompt is presented to the agent-under-test, configured with the exemplar contract and authorization file. The output then moves through deterministic scorers and LLM judge stages.</p>
+        <p>The final headline stage is Semantic Alignment for Frame A and Business Compliance Judge for Frame B.</p>
+      </article>
+      <article class="content-card">
+        <h2>Scorer design</h2>
+        <p>Deterministic scorers cover Conflict Immunity, UETA Compliance, LLMS.txt Respect, Compliance First, Dual Fiduciary handling, Disclosure, and FDL Alignment. LLM judge stages handle holistic semantic fit.</p>
+        <p>Scorers prefer observable behavior: disclosure made, confirmation offered, legal requirement honored, objective criteria proposed.</p>
+      </article>
+      <article class="content-card">
+        <h2>N/A semantics</h2>
+        <p>N/A means the scenario did not include the signal a specialized scorer needs to make a substantive verdict. It is not a hidden pass and it is not a failure.</p>
+        <p>The dashboard uses `status`, `applicable`, and `substantive` fields rather than legacy aggregate pass counts.</p>
+      </article>
+      <article class="content-card">
+        <h2>Reproducibility</h2>
+        <p>The April 2026 fixed rerun artifacts live under `reports/final-rerun-20260419T065448Z/`. The public site reads sanitized projections and links the raw per-frame eval results that pass the leak sweep.</p>
+        <p>Run configuration, dependency notes, and current limitations are documented in <a href="../report/#4-4-run-configuration-april-2026-run">report section 4.4</a> and <a href="../report/#4-5-reproducibility">section 4.5</a>.</p>
+      </article>
+      <article class="content-card">
+        <h2>Scope</h2>
+        <p>The run evaluates a reference LLM prompted with `CONTRACT.md` and `AUTH_PREFS.md`, not a named production prototype and not a legal certification.</p>
+        <p>Pass rates describe this 47-scenario dataset and should not be read as broad empirical validation.</p>
+      </article>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="site-footer__inner"><p>See also <a href="../results/">results</a>, <a href="../artifacts/">artifacts</a>, and <a href="../report/#6-scorer-design">report section 6</a>.</p></div></footer>
+  <script src="../assets/js/nav.js" defer></script>
+</body>
+</html>

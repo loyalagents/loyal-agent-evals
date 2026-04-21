@@ -1,0 +1,126 @@
+{
+  "artifact_role": "public-site-summary",
+  "generated_utc": {
+    "frame_a_report": "2026-04-19 06:58:11",
+    "frame_b_report": "2026-04-19 06:58:58"
+  },
+  "headline_results": {
+    "frame_a": {
+      "average_score": 0.6499999999999999,
+      "errors": 0,
+      "failed": 7,
+      "headline_stage": "Semantic Alignment",
+      "missing_outputs": 0,
+      "pass_rate": 0.825,
+      "passed": 33,
+      "scenarios_scored": 40,
+      "substantive_denominator": 40
+    },
+    "frame_b": {
+      "average_score": 0.9285714285714286,
+      "errors": 0,
+      "failed": 0,
+      "headline_stage": "Business Compliance Judge",
+      "missing_outputs": 0,
+      "pass_rate": 1.0,
+      "passed": 7,
+      "scenarios_scored": 7,
+      "substantive_denominator": 7
+    }
+  },
+  "manifest_version": "1.0",
+  "outputs": [
+    {
+      "artifact_role": "fixed-run",
+      "artifact_type": "json",
+      "baseline_compared_relpath": "reports/eval_results_20251208_144306.json",
+      "eval_pack": "eval_packs/fdl_frame_a_consumer.yaml",
+      "frame": "frame_a",
+      "sha256": "e5a45211a555bc10dcc2c27b300e98253e993a6ed5c89c5b0b09769428dde3e7"
+    },
+    {
+      "artifact_role": "fixed-run",
+      "artifact_type": "csv",
+      "baseline_compared_relpath": "reports/eval_results_20251208_144306.csv",
+      "eval_pack": "eval_packs/fdl_frame_a_consumer.yaml",
+      "frame": "frame_a",
+      "sha256": "907c0b286ad2003ddae7ecaf17a51fd4e1b4f7e3df63a6e8fd8eb77f5cc69970"
+    },
+    {
+      "artifact_role": "fixed-run",
+      "artifact_type": "markdown",
+      "baseline_compared_relpath": "reports/report_20251208_144306.md",
+      "eval_pack": "eval_packs/fdl_frame_a_consumer.yaml",
+      "frame": "frame_a",
+      "sha256": "07d70cba1b0362c35a3ef5ab69fddae7cd90fc6917daaa2229717298aa2edd88"
+    },
+    {
+      "artifact_role": "fixed-run",
+      "artifact_type": "json",
+      "baseline_compared_relpath": "reports/eval_results_20251208_144428.json",
+      "eval_pack": "eval_packs/fdl_frame_b_business.yaml",
+      "frame": "frame_b",
+      "sha256": "79d086e4b1e740f09baaa13e3d410d491d142784147181c93760640f8c3b1849"
+    },
+    {
+      "artifact_role": "fixed-run",
+      "artifact_type": "csv",
+      "baseline_compared_relpath": "reports/eval_results_20251208_144428.csv",
+      "eval_pack": "eval_packs/fdl_frame_b_business.yaml",
+      "frame": "frame_b",
+      "sha256": "f14713bdbbe50e8f13ad824ac3531f066dc1acbdd667d12f3424f3a323039e0d"
+    },
+    {
+      "artifact_role": "fixed-run",
+      "artifact_type": "markdown",
+      "baseline_compared_relpath": "reports/report_20251208_144428.md",
+      "eval_pack": "eval_packs/fdl_frame_b_business.yaml",
+      "frame": "frame_b",
+      "sha256": "b18ef2ba9652bbc9949e56533201584347b81a2f3e372094245c364496cfa242"
+    },
+    {
+      "artifact_role": "fixed-run-log",
+      "artifact_type": "terminal_log",
+      "baseline_compared_relpath": null,
+      "eval_pack": "eval_packs/fdl_frame_a_consumer.yaml",
+      "frame": "frame_a",
+      "sha256": "2f5471cec840ef11feb3d690336bd12251c932ced02dfe1115cd00eddfe1186a"
+    },
+    {
+      "artifact_role": "fixed-run-log",
+      "artifact_type": "terminal_log",
+      "baseline_compared_relpath": null,
+      "eval_pack": "eval_packs/fdl_frame_b_business.yaml",
+      "frame": "frame_b",
+      "sha256": "af8d68314a84ebc9baa124d086f51b217353662428a2cf1276fc57addd6a63b1"
+    },
+    {
+      "artifact_role": "reproducibility",
+      "artifact_type": "command_log",
+      "baseline_compared_relpath": null,
+      "eval_pack": null,
+      "frame": "both",
+      "sha256": "31cb4377dc0ef31a3c848aaae9f72fab204d0dbb20790bfd0a5ae573658c1480"
+    },
+    {
+      "artifact_role": "reproducibility",
+      "artifact_type": "environment_note",
+      "baseline_compared_relpath": null,
+      "eval_pack": null,
+      "frame": "both",
+      "sha256": "5d09cba2bc1f4c029171919d2589cd67d8393d29be14c0d2eccd0f92d9573189"
+    }
+  ],
+  "phase7_checks": {
+    "baseline_files_modified": false,
+    "disallowed_expression_node_call_messages": 0,
+    "focused_current_suite": "28 passed, 6 warnings",
+    "frame_a_required_specialized_stage_present": "LLMS.txt Respect / llms_respect",
+    "frame_b_required_specialized_stages_present": [
+      "Compliance First / compliance_first",
+      "Dual Fiduciary / dual_fiduciary"
+    ],
+    "pushed_to_github": false,
+    "repo_docs_evidence_staged": false
+  }
+}

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Loyal Agent Evals - Observable Contractual Loyalty</title>
+  <meta name="description" content="Interactive public website for Loyal Agent Evals: report, April 2026 results, methodology, ToS landscape, artifacts, and Take the CONTRACT MVP.">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="site-header__brand" href="./">Loyal Agent Evals</a>
+      <button class="site-nav__toggle" type="button" aria-controls="site-nav-list" aria-expanded="false">Menu</button>
+      <nav class="site-nav" aria-label="Primary">
+        <ul class="site-nav__list" id="site-nav-list" data-open="false">
+          <li><a href="report/">Report</a></li>
+          <li><a href="results/">Results</a></li>
+          <li><a href="walkthroughs/">Walkthroughs</a></li>
+          <li><a href="methodology/">Methodology</a></li>
+          <li><a href="framework/">Framework</a></li>
+          <li><a href="tos/">ToS</a></li>
+          <li><a href="artifacts/">Artifacts</a></li>
+          <li><a href="contract/">Contract</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero hero--home">
+      <div class="hero__content">
+        <p class="eyebrow">April 2026 public release</p>
+        <h1>Observable Contractual Loyalty</h1>
+        <p>A legal evaluation framework for AI agents: explicit duties, auditable scenarios, and open rerun artifacts for testing whether an agent honors contracted loyalty, care, obedience, disclosure, and statutory confirmation obligations.</p>
+        <div class="hero__ctas">
+          <a class="btn btn--primary" href="report/">Read the report</a>
+          <a class="btn" href="results/">Explore results</a>
+          <a class="btn btn--quiet" href="artifacts/">Artifacts</a>
+        </div>
+      </div>
+      <aside class="hero-panel" aria-label="Headline results">
+        <div class="metric">
+          <span class="metric__value" id="metric-scenarios">47</span>
+          <span class="metric__label">scenarios: 40 consumer + 7 business</span>
+        </div>
+        <div class="metric">
+          <span class="metric__value" id="metric-frame-a">33/40</span>
+          <span class="metric__label">Frame A final judge pass, 82.5%</span>
+        </div>
+        <div class="metric">
+          <span class="metric__value" id="metric-frame-b">7/7</span>
+          <span class="metric__label">Frame B final judge pass, 100%</span>
+        </div>
+      </aside>
+    </section>
+
+    <section class="section-band" aria-labelledby="paths-heading">
+      <div class="section-heading">
+        <p class="eyebrow">Start where the work is useful</p>
+        <h2 id="paths-heading">Three reader paths</h2>
+      </div>
+      <div class="card-grid card-grid--three">
+        <a class="path-card" href="report/#2-legal-and-theoretical-framework">
+          <span class="path-card__kicker">Legal / policy</span>
+          <strong>Why contract for loyalty?</strong>
+          <span>Read the legal frame, ToS risk-allocation problem, recommendations, and limitations.</span>
+        </a>
+        <a class="path-card" href="methodology/">
+          <span class="path-card__kicker">Evals / technical</span>
+          <strong>How were the runs scored?</strong>
+          <span>Inspect frames, scorers, N/A semantics, public data projection, and rerun artifacts.</span>
+        </a>
+        <a class="path-card" href="contract/">
+          <span class="path-card__kicker">AI agent builders</span>
+          <strong>Take the CONTRACT.</strong>
+          <span>Draft a client-side Markdown stub from explicit duty modules and authorization patterns.</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="split-section" aria-labelledby="posture-heading">
+      <div>
+        <p class="eyebrow">Terms posture</p>
+        <h2 id="posture-heading">Most consumer model terms allocate risk; none surveyed expressly accept loyalty duties.</h2>
+        <p>The report's Appendix G classifies frontier-model consumer terms into four postures: express disclaimer, implicit risk allocation, silence, and express acceptance. The surveyed consumer products sit in implicit risk allocation; express acceptance is the builder-facing target.</p>
+        <p><a href="tos/">See the ToS landscape</a> or jump to <a href="report/#appendix-g-frontier-model-consumer-terms-snapshot-retrieved-april-19-2026">Appendix G in the rendered report</a>.</p>
+      </div>
+      <figure class="posture-figure" aria-labelledby="posture-caption">
+        <svg viewBox="0 0 640 440" role="img" aria-labelledby="posture-caption">
+          <title id="posture-caption">Four ToS postures: express disclaimer, implicit risk allocation, silence, and express acceptance.</title>
+          <rect x="0" y="0" width="640" height="440" rx="8" fill="#f7f8f5"></rect>
+          <line x1="320" y1="58" x2="320" y2="382" stroke="#b8c0b0" stroke-width="2"></line>
+          <line x1="74" y1="220" x2="566" y2="220" stroke="#b8c0b0" stroke-width="2"></line>
+          <text x="320" y="34" text-anchor="middle" class="svg-label">Explicit status language</text>
+          <text x="320" y="418" text-anchor="middle" class="svg-label">Risk allocation through service terms</text>
+          <text x="68" y="224" transform="rotate(-90 68 224)" text-anchor="middle" class="svg-label">No accepted duties</text>
+          <text x="586" y="224" transform="rotate(90 586 224)" text-anchor="middle" class="svg-label">Accepted duties</text>
+          <a href="report/#g-3-openai-chatgpt-and-chatgpt-plus"><g>
+            <rect x="92" y="84" width="202" height="104" rx="8" fill="#fff" stroke="#315c7c"></rect>
+            <text x="112" y="120" class="svg-title">Express disclaimer</text>
+            <text x="112" y="150" class="svg-copy">Business/API terms</text>
+            <text x="112" y="172" class="svg-copy">OpenAI business, xAI enterprise</text>
+          </g></a>
+          <a href="report/#g-6-summary-characterization-table"><g>
+            <rect x="92" y="252" width="202" height="104" rx="8" fill="#fff" stroke="#b1663a"></rect>
+            <text x="112" y="288" class="svg-title">Implicit risk allocation</text>
+            <text x="112" y="318" class="svg-copy">Claude, ChatGPT, Gemini, Grok</text>
+            <text x="112" y="340" class="svg-copy">consumer posture</text>
+          </g></a>
+          <g>
+            <rect x="350" y="84" width="202" height="104" rx="8" fill="#fff" stroke="#8b8f96"></rect>
+            <text x="370" y="120" class="svg-title">Silence</text>
+            <text x="370" y="150" class="svg-copy">No strong current example</text>
+            <text x="370" y="172" class="svg-copy">among surveyed products</text>
+          </g>
+          <a href="framework/"><g>
+            <rect x="350" y="252" width="202" height="104" rx="8" fill="#fff" stroke="#3b7b5f"></rect>
+            <text x="370" y="288" class="svg-title">Express acceptance</text>
+            <text x="370" y="318" class="svg-copy">Design target:</text>
+            <text x="370" y="340" class="svg-copy">Observable Contractual Loyalty</text>
+          </g></a>
+        </svg>
+      </figure>
+    </section>
+
+    <section class="section-band" aria-labelledby="evidence-heading">
+      <div class="section-heading">
+        <p class="eyebrow">Evidence surface</p>
+        <h2 id="evidence-heading">From report to rerun data</h2>
+      </div>
+      <div class="feature-list">
+        <article>
+          <h3>Rendered report</h3>
+          <p>HTML report with section anchors, table of contents, and a visible numbered bibliography in section 15.</p>
+        </article>
+        <article>
+          <h3>Results dashboard</h3>
+          <p>Frame-level headlines, stage breakdowns, N/A-aware filters, per-scenario rows, and duty rollups from sanitized JSON projections.</p>
+        </article>
+        <article>
+          <h3>Builder module</h3>
+          <p>A client-side CONTRACT stub generator that does not submit data or call a backend.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <p>Docs: <a href="LICENSE-CC-BY-4.0">CC BY 4.0</a>. Code: <a href="LICENSE">Apache 2.0</a>. Source: <a href="https://github.com/loyalagents/loyal-agent-evals">github.com/loyalagents/loyal-agent-evals</a>.</p>
+      <p>Suggested citation: Greenwood, D. (2026). <em>Loyal Agent Evals: A Legal Evaluation Framework for AI Agents.</em> Stanford Loyal Agents Initiative.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/nav.js" defer></script>
+  <script src="assets/js/home.js" defer></script>
+</body>
+</html>

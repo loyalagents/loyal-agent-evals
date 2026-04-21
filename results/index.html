@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Results Dashboard - Loyal Agent Evals</title>
+  <meta name="description" content="N/A-aware dashboard for the April 2026 Loyal Agent Evals fixed rerun results.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="site-header__brand" href="../">Loyal Agent Evals</a>
+      <button class="site-nav__toggle" type="button" aria-controls="site-nav-list" aria-expanded="false">Menu</button>
+      <nav class="site-nav" aria-label="Primary">
+        <ul class="site-nav__list" id="site-nav-list" data-open="false">
+          <li><a href="../report/">Report</a></li>
+          <li><a href="../results/">Results</a></li>
+          <li><a href="../walkthroughs/">Walkthroughs</a></li>
+          <li><a href="../methodology/">Methodology</a></li>
+          <li><a href="../framework/">Framework</a></li>
+          <li><a href="../tos/">ToS</a></li>
+          <li><a href="../artifacts/">Artifacts</a></li>
+          <li><a href="../contract/">Contract</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <header class="page-hero">
+      <p class="eyebrow">April 2026 fixed rerun</p>
+      <h1>Results Dashboard</h1>
+      <p>Frame-level headlines, stage breakdowns, duty rollups, and a filterable 47-scenario table loaded from sanitized public projections of the final rerun artifacts.</p>
+    </header>
+
+    <section aria-labelledby="headline-heading">
+      <div class="section-heading">
+        <h2 id="headline-heading">Headline results</h2>
+        <p>N/A rows are audit evidence, not failures. They are rendered separately and excluded from substantive pass-rate claims.</p>
+      </div>
+      <div id="summary-cards" class="card-grid card-grid--two" aria-live="polite"></div>
+      <p id="results-error" class="callout" hidden></p>
+    </section>
+
+    <section class="section-band" aria-labelledby="stage-heading">
+      <div class="section-heading">
+        <h2 id="stage-heading">Stage breakdown</h2>
+        <p>Counts come from each frame's `stage_summary`, preserving applicable and not-applicable rows.</p>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Frame</th>
+              <th>Stage</th>
+              <th>Applicable</th>
+              <th>N/A</th>
+              <th>Passed</th>
+              <th>Failed</th>
+              <th>Avg score</th>
+            </tr>
+          </thead>
+          <tbody id="stage-body"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section-band" aria-labelledby="duty-heading">
+      <div class="section-heading">
+        <h2 id="duty-heading">Per-duty rollup</h2>
+        <p>Scorer-to-duty mapping follows the report and CONTRACT duty model. Bars show pass rate on applicable rows; N/A remains explicit.</p>
+      </div>
+      <div id="duty-rollup" class="bar-chart" aria-live="polite"></div>
+    </section>
+
+    <section class="section-band" aria-labelledby="scenario-heading">
+      <div class="section-heading">
+        <h2 id="scenario-heading">Scenario table</h2>
+        <p id="row-count">Loading scenarios...</p>
+      </div>
+      <div class="controls" aria-label="Scenario filters">
+        <div class="control">
+          <label for="frame-filter">Frame</label>
+          <select id="frame-filter">
+            <option value="all">All frames</option>
+            <option value="frame_a">Frame A</option>
+            <option value="frame_b">Frame B</option>
+          </select>
+        </div>
+        <div class="control">
+          <label for="scorer-filter">Scorer</label>
+          <select id="scorer-filter">
+            <option value="all">All scorers</option>
+          </select>
+        </div>
+        <div class="control">
+          <label for="status-filter">Status</label>
+          <select id="status-filter">
+            <option value="all">All statuses</option>
+            <option value="PASS">PASS</option>
+            <option value="FAIL">FAIL</option>
+            <option value="N/A">N/A</option>
+          </select>
+        </div>
+        <div class="control">
+          <label for="sort-select">Sort</label>
+          <select id="sort-select">
+            <option value="id">Scenario ID</option>
+            <option value="score">Final score</option>
+          </select>
+        </div>
+        <div class="control">
+          <label for="scenario-search">Search</label>
+          <input id="scenario-search" type="search" placeholder="ID or prompt text">
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Scenario</th>
+              <th>Frame</th>
+              <th>Final stage</th>
+              <th>All scorer verdicts</th>
+            </tr>
+          </thead>
+          <tbody id="scenario-body"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <p>Data source: <a href="../assets/data/site_data.v1.json">site_data.v1.json</a>, <a href="../assets/data/frame_a.v1.json">frame_a.v1.json</a>, and <a href="../assets/data/frame_b.v1.json">frame_b.v1.json</a>.</p>
+    </div>
+  </footer>
+  <script src="../assets/js/nav.js" defer></script>
+  <script src="../assets/js/results.js" defer></script>
+</body>
+</html>

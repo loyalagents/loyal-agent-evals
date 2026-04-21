@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Artifacts - Loyal Agent Evals</title>
+  <meta name="description" content="Allowlisted public artifacts for the Loyal Agent Evals website.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header"><div class="site-header__inner"><a class="site-header__brand" href="../">Loyal Agent Evals</a><button class="site-nav__toggle" type="button" aria-controls="site-nav-list" aria-expanded="false">Menu</button><nav class="site-nav" aria-label="Primary"><ul class="site-nav__list" id="site-nav-list" data-open="false"><li><a href="../report/">Report</a></li><li><a href="../results/">Results</a></li><li><a href="../walkthroughs/">Walkthroughs</a></li><li><a href="../methodology/">Methodology</a></li><li><a href="../framework/">Framework</a></li><li><a href="../tos/">ToS</a></li><li><a href="../artifacts/">Artifacts</a></li><li><a href="../contract/">Contract</a></li></ul></nav></div></header>
+  <main id="main">
+    <header class="page-hero">
+      <p class="eyebrow">Downloads</p>
+      <h1>Artifacts</h1>
+      <p>Allowlisted report, data, rerun, repository, and license artifacts. The site intentionally does not link the raw final-rerun manifest, environment note, command log, or run logs because those are not needed for public browsing.</p>
+    </header>
+
+    <section class="section-band" aria-labelledby="report-artifacts">
+      <h2 id="report-artifacts">Report and public data</h2>
+      <div class="artifact-list">
+        <div class="artifact-item"><div><strong>Rendered report</strong><br><span>HTML page with table of contents and visible references.</span></div><a class="btn" href="../report/">Open</a></div>
+        <div class="artifact-item"><div><strong>Raw report Markdown</strong><br><code>docs/report.md</code></div><a class="btn" href="../docs/report.md">Open</a></div>
+        <div class="artifact-item"><div><strong>Report PDF</strong><br><code>docs/report.pdf</code></div><a class="btn" href="../docs/report.pdf">Open</a></div>
+        <div class="artifact-item"><div><strong>Sanitized public summary</strong><br><code>assets/data/site_data.v1.json</code></div><a class="btn" href="../assets/data/site_data.v1.json">Open</a></div>
+        <div class="artifact-item"><div><strong>Sanitized Frame A projection</strong><br><code>assets/data/frame_a.v1.json</code></div><a class="btn" href="../assets/data/frame_a.v1.json">Open</a></div>
+        <div class="artifact-item"><div><strong>Sanitized Frame B projection</strong><br><code>assets/data/frame_b.v1.json</code></div><a class="btn" href="../assets/data/frame_b.v1.json">Open</a></div>
+      </div>
+    </section>
+
+    <section class="section-band" aria-labelledby="raw-rerun">
+      <h2 id="raw-rerun">April 2026 per-frame rerun artifacts</h2>
+      <div class="artifact-list">
+        <div class="artifact-item"><div><strong>Frame A JSON</strong><br><code>reports/final-rerun-20260419T065448Z/frame_a/eval_results_20260418_235811.json</code></div><a class="btn" href="../reports/final-rerun-20260419T065448Z/frame_a/eval_results_20260418_235811.json">Open</a></div>
+        <div class="artifact-item"><div><strong>Frame A CSV</strong><br><code>reports/final-rerun-20260419T065448Z/frame_a/eval_results_20260418_235811.csv</code></div><a class="btn" href="../reports/final-rerun-20260419T065448Z/frame_a/eval_results_20260418_235811.csv">Open</a></div>
+        <div class="artifact-item"><div><strong>Frame A Markdown report</strong><br><code>reports/final-rerun-20260419T065448Z/frame_a/report_20260418_235811.md</code></div><a class="btn" href="../reports/final-rerun-20260419T065448Z/frame_a/report_20260418_235811.md">Open</a></div>
+        <div class="artifact-item"><div><strong>Frame B JSON</strong><br><code>reports/final-rerun-20260419T065448Z/frame_b/eval_results_20260418_235858.json</code></div><a class="btn" href="../reports/final-rerun-20260419T065448Z/frame_b/eval_results_20260418_235858.json">Open</a></div>
+        <div class="artifact-item"><div><strong>Frame B CSV</strong><br><code>reports/final-rerun-20260419T065448Z/frame_b/eval_results_20260418_235858.csv</code></div><a class="btn" href="../reports/final-rerun-20260419T065448Z/frame_b/eval_results_20260418_235858.csv">Open</a></div>
+        <div class="artifact-item"><div><strong>Frame B Markdown report</strong><br><code>reports/final-rerun-20260419T065448Z/frame_b/report_20260418_235858.md</code></div><a class="btn" href="../reports/final-rerun-20260419T065448Z/frame_b/report_20260418_235858.md">Open</a></div>
+      </div>
+    </section>
+
+    <section class="section-band" aria-labelledby="repo-license">
+      <h2 id="repo-license">Repository and licenses</h2>
+      <div class="artifact-list">
+        <div class="artifact-item"><div><strong>Authoritative repository</strong><br><code>github.com/loyalagents/loyal-agent-evals</code></div><a class="btn" href="https://github.com/loyalagents/loyal-agent-evals">Open</a></div>
+        <div class="artifact-item"><div><strong>Apache 2.0 code license</strong><br><code>LICENSE</code></div><a class="btn" href="../LICENSE">Open</a></div>
+        <div class="artifact-item"><div><strong>CC BY 4.0 documentation license</strong><br><code>LICENSE-CC-BY-4.0</code></div><a class="btn" href="../LICENSE-CC-BY-4.0">Open</a></div>
+        <div class="artifact-item"><div><strong>License summary</strong><br><code>LICENSES.md</code></div><a class="btn" href="../LICENSES.md">Open</a></div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="site-footer__inner"><p>For the interactive view, open <a href="../results/">results</a>.</p></div></footer>
+  <script src="../assets/js/nav.js" defer></script>
+</body>
+</html>
