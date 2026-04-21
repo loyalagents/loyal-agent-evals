@@ -1,6 +1,8 @@
 # Working Loyal Agent Eval Code Enhancements
 
-> Stanford Loyal Agents Initiative — December 2025
+> Stanford Loyal Agents Initiative — December 2025 to April 2026
+>
+> See the FULL LIVE INTERACTIVE WEBSITE FOR THIS RESEARCH HERE: [https://loyalagents.github.io/loyal-agent-evals](https://loyalagents.github.io/loyal-agent-evals)
 
 ---
 
